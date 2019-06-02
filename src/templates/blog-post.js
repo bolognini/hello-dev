@@ -1,5 +1,5 @@
 import React from "react"
-import Article from '../components/Article'
+import Article from "../components/Article"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 // import SEO from "../components/seo"
@@ -12,17 +12,17 @@ class BlogPostTemplate extends React.Component {
     return (
       <Layout>
         <Article attributes={postProps}>
-        {/* <SEO
+          {/* <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         /> */}
-        {/* <h1>{post.frontmatter.title}</h1> */}
-        {/* <p>
+          {/* <h1>{post.frontmatter.title}</h1> */}
+          {/* <p>
           {post.frontmatter.date}
         </p> */}
-        {post.html}
+          {post.html}
 
-        {/* <ul
+          {/* <ul
           style={{
             display: `flex`,
             flexWrap: `wrap`,
@@ -46,7 +46,7 @@ class BlogPostTemplate extends React.Component {
             )}
           </li>
         </ul> */}
-      </Article>
+        </Article>
       </Layout>
     )
   }

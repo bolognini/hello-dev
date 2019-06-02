@@ -79,9 +79,9 @@ const Layout = ({ children }) => (
       }
     `}
     render={() => (
-      <div className='container bg-primary page'>
-        <GlobalStyle/>
-        <Menu/>
+      <div className="container bg-primary page">
+        <GlobalStyle />
+        <Menu />
         {children}
       </div>
     )}

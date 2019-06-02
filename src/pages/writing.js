@@ -3,10 +3,10 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import SectionWrapper from '../components/SectionWrapper'
-import Title3D from '../components/Title3D'
-import PostList from '../components/PostList'
-import PostItem from '../components/PostItem'
+import SectionWrapper from "../components/SectionWrapper"
+import Title3D from "../components/Title3D"
+import PostList from "../components/PostList"
+import PostItem from "../components/PostItem"
 
 class Writing extends React.Component {
   render() {
@@ -21,7 +21,13 @@ class Writing extends React.Component {
         </SectionWrapper>
         <PostList>
           {posts.map(({ node }) => {
-            return (<PostItem post={node.frontmatter} slug={node.fields.slug} key={node.fields.slug}></PostItem>)
+            return (
+              <PostItem
+                post={node.frontmatter}
+                slug={node.fields.slug}
+                key={node.fields.slug}
+              />
+            )
           })}
         </PostList>
       </Layout>
