@@ -1,16 +1,71 @@
-/**
- * Layout component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
+import { createGlobalStyle } from "styled-components"
 
-import Header from "./header"
-import "./layout.css"
+import Menu from "../components/Menu"
+
+const TIMEOUT = 400
+
+const GlobalStyle = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:300,700|Source+Sans+Pro:400,400i,700');
+
+  :root {
+    --color-1: #2A2935;
+    --color-2: #4EFF6A;
+    --color-3: #FF278F;
+    --color-4: #F8F8FA;
+    --color-5: #FF278F;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    background: var(--color-1);
+    padding: 20px;
+  }
+
+  .app {
+    background: var(--color-4);
+  }
+
+  .page {
+    display: flex;
+    min-height: calc(100vh - 40px);
+    flex-direction: column;
+    background-color: var(--color-4);
+  }
+
+  .page-transition-enter {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+  .page-transition-enter-active {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: opacity ${TIMEOUT}ms, transform ${TIMEOUT}ms;
+  }
+  .page-transition-exit {
+    opacity: 1;
+  }
+  .page-transition-exit-active {
+    opacity: 0;
+    transition: opacity ${TIMEOUT}ms;
+  }
+  .loading-indicator-appear,
+  .loading-indicator-enter {
+    opacity: 0;
+  }
+  .loading-indicator-appear-active,
+  .loading-indicator-enter-active {
+    opacity: 1;
+    transition: opacity ${TIMEOUT}ms;
+  }
+`
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -23,25 +78,12 @@ const Layout = ({ children }) => (
         }
       }
     `}
-    render={data => (
-      <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-          }}
-        >
-          <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
-        </div>
-      </>
+    render={() => (
+      <div className='container bg-primary page'>
+        <GlobalStyle/>
+        <Menu/>
+        {children}
+      </div>
     )}
   />
 )
