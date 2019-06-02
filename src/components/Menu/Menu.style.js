@@ -18,7 +18,7 @@ export const MenuItem = styled.li`
     display: block;
     padding: 10px;
     text-decoration: none;
-    font-family: Source Sans Pro;
+    font-family: 'Source Sans Pro', sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;

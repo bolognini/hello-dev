@@ -1,9 +1,9 @@
 import React from "react"
-import { Card, Tags, PostTitle, PostSummary } from './PostItem.style'
+import { Card, StyledLink, Tags, PostTitle, PostSummary } from './PostItem.style'
 import { Link } from "gatsby"
 
 const ContactLinks = ({ post, slug }) => (
-  <Link to={`/${slug}`}>
+  <StyledLink to={`/${slug}`}>
     <Card>
       <Tags>
         <ul>
@@ -13,7 +13,7 @@ const ContactLinks = ({ post, slug }) => (
       <PostTitle>{post.title}</PostTitle>
       <PostSummary>{post.description}</PostSummary>
     </Card>
-  </Link>
+  </StyledLink>
 )
 
 export default ContactLinks

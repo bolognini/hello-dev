@@ -12,7 +12,7 @@ export const ArticleWrapper = styled.article`
 
 export const ArticleTitle = styled.h1`
   color: var(--color-1);
-  font-family: Barlow Condensed;
+  font-family: 'Barlow Condensed', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 64px;
@@ -46,7 +46,7 @@ export const ArticleContent = styled.div`
     color: var(--color-4);
     margin: 20px -40px;
     padding: 30px 60px;
-    font-family: 'Fira Code';
+    font-family: "Fira Code", monospace;
   }
 
   img {

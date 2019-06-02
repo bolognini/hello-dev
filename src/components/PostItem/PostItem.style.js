@@ -1,4 +1,10 @@
+import React from "react"
 import styled from "styled-components"
+import { Link } from "gatsby"
+
+export const StyledLink = styled(props => <Link {...props} />)`
+  text-decoration: none;
+`
 
 export const Card = styled.div`
   width: 100%;
@@ -32,12 +38,14 @@ export const Tags = styled.div`
     font-size: 1.11111rem;
     text-align: left;
     white-space: nowrap;
+    color: var(--color-1);
     padding: 5px 0;
+    font-family: 'Source Sans Pro', sans-serif;
   }
 `
 export const PostTitle = styled.div`
   grid-area: title;
-  font-family: 'Barlow Condensed';
+  font-family: 'Barlow Condensed', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 64px;
@@ -48,7 +56,7 @@ export const PostTitle = styled.div`
 `
 export const PostSummary = styled.div`
   grid-area: summary;
-  font-family: 'Source Sans Pro';
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 18px;
   line-height: 125%;
   color: var(--color-1);

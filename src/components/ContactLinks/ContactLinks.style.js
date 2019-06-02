@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const Content = styled.div`
   color: var(--color-1);
   width: 100%;
-  font-family: 'Source Sans Pro';
+  font-family: 'Source Sans Pro', sans-serif;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr 1fr;

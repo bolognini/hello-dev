@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const Title = styled.h2`
   color: var(--color-1);
   flex: ${props => props.noFlex ? 'none' : 5};
-  font-family: 'Barlow Condensed';
+  font-family: 'Barlow Condensed', sans-serif;
   font-weight: bold;
   font-size: 96px;
   line-height: 81px;
