@@ -47,6 +47,7 @@ export const ArticleContent = styled.div`
     margin: 20px -40px;
     padding: 30px 60px;
     font-family: "Fira Code", monospace;
+    overflow: auto;
   }
 
   img {

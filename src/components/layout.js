@@ -27,6 +27,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Source Sans Pro', sans-serif;
     background: var(--color-1);
     padding: 20px;
+    overflow: auto;
   }
 
   .app {
@@ -38,6 +39,10 @@ const GlobalStyle = createGlobalStyle`
     min-height: calc(100vh - 40px);
     flex-direction: column;
     background-color: var(--color-4);
+    background-image: url('/img/bg.png');
+    background-size: 90% auto;
+    background-position: center 20px;
+    background-repeat: no-repeat;
   }
 
   .page-transition-enter {
