@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
 
   :root {
     --color-1: #2A2935;
-    --color-2: #4EFF6A;
+    --color-2: #4effc6;
     --color-3: #FF278F;
     --color-4: #F8F8FA;
     --color-5: #FF278F;
@@ -39,7 +39,7 @@ const GlobalStyle = createGlobalStyle`
     min-height: calc(100vh - 40px);
     flex-direction: column;
     background-color: var(--color-4);
-    background-image: url('/img/bg.png');
+    /* background-image: url('/img/bg.png'); */
     background-size: 90% auto;
     background-position: center 20px;
     background-repeat: no-repeat;

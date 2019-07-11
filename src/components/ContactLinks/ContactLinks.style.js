@@ -25,13 +25,20 @@ export const Content = styled.div`
     color: var(--color-1);
     transition: color 0.2s linear;
 
-    &::before {
+
+    /* &::before {
       color: var(--color-1);
-    }
+    } */
 
     &:hover {
-      color: var(--color-3);
-      transition: color 0.2s linear;
+      background: linear-gradient(45deg, var(--color-2) 0%, var(--color-3) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      @supports not (-webkit-text-fill-color: transparent) {
+        color: var(--color-3);
+        transition: color 0.2s linear;
+      }
     }
   }
 `
