@@ -1,9 +1,16 @@
-import React from 'react'
-import { Title } from './Title3D.style'
+import React from "react"
+import { Title } from "./Title3D.style"
 
+const Title3D = props => {
+  const title = props.children.split("")
 
-const Title3D = (props) => (
-  <Title>{props.children}</Title>
-)
+  return (
+    <Title>
+      {title.map(l => (
+        <span>{l}</span>
+      ))}
+    </Title>
+  )
+}
 
 export default Title3D
