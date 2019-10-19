@@ -1,19 +1,20 @@
-import React from 'react'
-import { MenuWrapper, MenuItem, MenuSeparator } from './Menu.style'
+import React from "react"
+import { MenuWrapper, MenuItem, MenuSeparator } from "./Menu.style"
 import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const Menu = () => (
   <MenuWrapper>
     <MenuItem>
-      <Link to='/' activeClassName='active'>
+      <AniLink fade to="/" activeClassName="active">
         about
-      </Link>
+      </AniLink>
     </MenuItem>
     <MenuSeparator>|</MenuSeparator>
     <MenuItem>
-      <Link to='/writing' activeClassName='active'>
+      <AniLink fade to="/writing" activeClassName="active">
         writing
-      </Link>
+      </AniLink>
     </MenuItem>
   </MenuWrapper>
 )

@@ -63,6 +63,7 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-netlify-cms`,
-    `gatsby-plugin-styled-components`
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-transition-link`,
   ],
 }

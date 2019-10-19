@@ -5,7 +5,7 @@ import { createGlobalStyle } from "styled-components"
 
 import Menu from "../components/Menu"
 
-const TIMEOUT = 400
+const TIMEOUT = 500
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:300,700|Source+Sans+Pro:400,400i,700');
@@ -45,21 +45,32 @@ const GlobalStyle = createGlobalStyle`
     background-repeat: no-repeat;
   }
 
-  .page-transition-enter {
-    opacity: 0;
+  .tl-edges {
+    overflow: hidden;
+  }
+
+  .tl-wrapper {
+    opacity: 0 !important;
+    transition: opacity ${TIMEOUT}ms;
+  }
+
+  .tl-wrapper-status--entering {
+    opacity: 0 !important;
     transform: translate3d(0, 20px, 0);
   }
-  .page-transition-enter-active {
-    opacity: 1;
+  .tl-wrapper-status--entered {
+    opacity: 1 !important;
     transform: translate3d(0, 0, 0);
     transition: opacity ${TIMEOUT}ms, transform ${TIMEOUT}ms;
   }
-  .page-transition-exit {
+  /* .tl-wrapper-status--exiting {
     opacity: 1;
-  }
-  .page-transition-exit-active {
-    opacity: 0;
-    transition: opacity ${TIMEOUT}ms;
+  } */
+  .tl-wrapper-status--exiting {
+    opacity: 0 !important;
+    transform: translate3d(0, 20px, 0);
+    transition: opacity ${TIMEOUT}ms, transform ${TIMEOUT}ms;
+    transition-delay: 0.2s;
   }
   .loading-indicator-appear,
   .loading-indicator-enter {
