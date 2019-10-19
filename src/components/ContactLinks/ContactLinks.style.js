@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const Content = styled.div`
   color: var(--color-1);
   width: 100%;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr 1fr;
@@ -17,21 +17,24 @@ export const Content = styled.div`
   }
 
   .social-icons__link {
-      text-align: center;
-    }
+    text-align: center;
+  }
 
   .social-icons__icon {
     font-size: 78px;
     color: var(--color-1);
     transition: color 0.2s linear;
 
-
     /* &::before {
       color: var(--color-1);
     } */
 
     &:hover {
-      background: linear-gradient(45deg, var(--color-2) 0%, var(--color-3) 100%);
+      background: linear-gradient(
+        45deg,
+        var(--color-2) 0%,
+        var(--color-3) 100%
+      );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
 
