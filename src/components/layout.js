@@ -38,7 +38,7 @@ const GlobalStyle = createGlobalStyle`
     min-height: calc(100vh - 40px);
     flex-direction: column;
     background-color: var(--color-4);
-    background-image: url('/img/bg.png');
+    /* background-image: url('/img/bg.png'); */
     background-size: 90% auto;
     background-position: center 20px;
     background-repeat: no-repeat;

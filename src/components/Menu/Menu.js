@@ -22,6 +22,7 @@ const Menu = () => (
         cover
         to="/writing"
         activeClassName="active"
+        partiallyActive={true}
         bg="#2A2935"
         duration={0.7}
       >
