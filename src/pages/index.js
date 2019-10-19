@@ -8,6 +8,7 @@ import Content from "../components/Content"
 import ContactLinks from "../components/ContactLinks"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Scrolldown from "../components/Scrolldown"
 
 const IndexPage = () => (
   <Layout>
@@ -15,6 +16,7 @@ const IndexPage = () => (
     <SEO title="Home" />
     <SectionWrapper tall>
       <Title3D>hello!</Title3D>
+      <Scrolldown />
     </SectionWrapper>
     <SectionWrapper>
       <ContentWrapper>

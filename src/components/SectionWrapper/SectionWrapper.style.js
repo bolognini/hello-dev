@@ -6,5 +6,6 @@ export const Section = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: ${props => props.tall ? 'calc(100vh - 40px)' : '500px' };
+  min-height: ${props => (props.tall ? "calc(100vh - 40px)" : "500px")};
+  position: relative;
 `
