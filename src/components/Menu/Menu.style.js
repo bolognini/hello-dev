@@ -2,11 +2,20 @@ import styled from "styled-components"
 
 export const MenuWrapper = styled.ul`
   position: absolute;
-  top: 40px;
-  right: 80px;
+  top: 20px;
   display: inline-block;
   margin: 0;
   z-index: 1;
+  right: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+
+  @media screen and (min-width: 600px) {
+    top: 40px;
+    right: 80px;
+    width: auto;
+  }
 `
 
 export const MenuItem = styled.li`

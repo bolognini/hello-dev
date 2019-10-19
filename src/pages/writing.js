@@ -19,17 +19,21 @@ class Writing extends React.Component {
         <SectionWrapper>
           <Title3D>writing</Title3D>
         </SectionWrapper>
-        <PostList>
-          {posts.map(({ node }) => {
-            return (
-              <PostItem
-                post={node.frontmatter}
-                slug={node.fields.slug}
-                key={node.fields.slug}
-              />
-            )
-          })}
-        </PostList>
+        {posts.length ? (
+          <PostList>
+            {posts.map(({ node }) => {
+              return (
+                <PostItem
+                  post={node.frontmatter}
+                  slug={node.fields.slug}
+                  key={node.fields.slug}
+                />
+              )
+            })}
+          </PostList>
+        ) : (
+          <p>Brb.</p>
+        )}
       </Layout>
     )
   }

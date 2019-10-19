@@ -3,10 +3,15 @@ import styled from "styled-components"
 export const LogoWrapper = styled.ul`
   position: absolute;
   top: 40px;
-  left: 80px;
+  left: 40px;
   display: inline-block;
   margin: 0;
   z-index: 1;
+  display: none;
+
+  @media screen and (min-width: 600px) {
+    display: block;
+  }
 `
 
 export const LogoItem = styled.li`
