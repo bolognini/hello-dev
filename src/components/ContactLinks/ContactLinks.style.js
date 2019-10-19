@@ -1,4 +1,9 @@
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
+
+const h0i = keyframes`
+  0%, 32%, 64%, 100% { color: var(--color-2); }
+  16%, 48%, 80% { color: var(--color-3); }
+`
 
 export const Content = styled.div`
   color: var(--color-1);
@@ -25,22 +30,14 @@ export const Content = styled.div`
     color: var(--color-1);
     transition: color 0.2s linear;
 
-    /* &::before {
-      color: var(--color-1);
-    } */
-
     &:hover {
-      background: linear-gradient(
-        45deg,
-        var(--color-2) 0%,
-        var(--color-3) 100%
-      );
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      animation: ${h0i} 2s linear infinite;
+      transition: color 0.2s ease-in-out;
 
-      @supports not (-webkit-text-fill-color: transparent) {
-        color: var(--color-3);
-        transition: color 0.2s linear;
+      @media (prefers-reduced-motion: reduce) {
+        animation: none;
+        color: var(--color-2);
+        transition: color 0.1s ease-in-out;
       }
     }
   }
