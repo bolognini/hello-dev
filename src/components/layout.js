@@ -4,6 +4,7 @@ import { StaticQuery, graphql } from "gatsby"
 import { createGlobalStyle } from "styled-components"
 
 import Menu from "../components/Menu"
+import Logo from "../components/Logo"
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:300,700|Source+Sans+Pro:400,400i,700');
@@ -58,6 +59,7 @@ const Layout = ({ children }) => (
     render={() => (
       <div className="container bg-primary page">
         <GlobalStyle />
+        <Logo />
         <Menu />
         {children}
       </div>
