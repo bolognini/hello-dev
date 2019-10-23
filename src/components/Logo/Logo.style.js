@@ -7,7 +7,6 @@ export const LogoWrapper = styled.ul`
   display: inline-block;
   margin: 0;
   z-index: 1;
-  display: none;
 
   @media screen and (min-width: 600px) {
     display: block;

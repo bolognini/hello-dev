@@ -33,6 +33,7 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "husky": "^3.0.9",
     "prettier": "^1.17.1",
     "styled-components": "^4.4.0",
     "stylelint": "^11.0.0",
@@ -52,6 +53,11 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint:css && npm run format"
+    }
   },
   "repository": {
     "type": "git",
